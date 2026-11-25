@@ -1,0 +1,80 @@
+data_root: 'data/clevr_4_100k'
+features_dir: 'features/clevr4'
+tokens: false
+image: image
+text: text
+k_aug: 2   # augmented views per sample, for the baselines only (FAnchor does not use them)
+jitter: 0.2   # augmented views, baselines only
+crop_min: 0.8   # augmented views, baselines only
+batch_size: 64
+probe_max_iter: 1000
+record_every: 1
+
+methods:
+  fanchor:
+    shared_dim: 8
+    private_dim: 8
+    shared_hidden: 256
+    private_hidden: 256
+    decoder_hidden: 256
+    shared_layers: 3
+    private_layers: 3
+    decoder_layers: 3
+    share_decoder: true
+    shared_residual: false
+    hier_cond: false
+    stop_grad: true
+    two_stage: false
+    lam: 1.0
+    recon_loss_type: additive_matryoshka
+    cl_loss_type: fanchor
+    epochs: 10
+    lr_shared: 1e-4
+    lr_private: 1e-4
+
+  factorcl:
+    embed_dim: 8
+    hidden_dim: 256
+    layers: 3
+    shared_residual: false
+    epochs: 10
+    lr: 1e-4
+    n_club: 1
+
+  disentangledssl:
+    embed_dim: 8
+    private_dim: 8
+    hidden_dim: 256
+    layers: 3
+    shared_residual: false
+    kappa: 1000.0
+    beta: 0.01
+    lmd: 0.001
+    epochs_s1: 10
+    epochs_s2: 6
+    lr: 1e-4
+
+  jointdisen:
+    embed_dim: 8
+    private_dim: 8
+    hidden_dim: 256
+    layers: 3
+    shared_residual: false
+    kappa: 1000.0
+    a: 0.1
+    lmd: 0.001
+    epochs: 10
+    lr: 1e-4
+
+  repercent:
+    tokens: true
+    embed_dim: 8
+    depth: 2
+    cross_heads: 2
+    latent_heads: 1
+    kappa: 3000.0
+    alpha: 2.0
+    beta: 2.0
+    lmd: 1.0
+    epochs: 10
+    lr: 1e-4

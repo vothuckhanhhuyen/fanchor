@@ -1,0 +1,27 @@
+data_root: 'data/synthetic'
+n_modalities: 2
+batch_size: 256
+probe_max_iter: 1000
+record_every: 10
+
+methods:
+  fanchor:
+    shared_dim: 50
+    private_dim: 50
+    shared_hidden: 100
+    private_hidden: 100
+    decoder_hidden: 100
+    shared_layers: 3
+    private_layers: 3
+    decoder_layers: 3
+    share_decoder: true
+    shared_residual: false
+    hier_cond: false
+    stop_grad: true
+    two_stage: false
+    lam: 1.0
+    recon_loss_type: additive_matryoshka
+    cl_loss_type: fanchor
+    epochs: 50
+    lr_shared: 1e-3
+    lr_private: 1e-4

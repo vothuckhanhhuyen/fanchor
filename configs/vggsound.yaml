@@ -1,0 +1,77 @@
+data_root: 'data/vggsound'
+features_dir: 'features/vggsound'
+tokens: false
+val_frac: 0.1
+k_aug: 2   # augmented views per sample, for the baselines only (FAnchor does not use them)
+batch_size: 512
+probe_max_iter: 1000
+record_every: 1
+
+methods:
+  fanchor:
+    shared_dim: 256
+    private_dim: 64
+    shared_hidden: 512
+    private_hidden: 512
+    decoder_hidden: 512
+    shared_layers: 3
+    private_layers: 3
+    decoder_layers: 3
+    share_decoder: true
+    shared_residual: false
+    hier_cond: false
+    stop_grad: true
+    two_stage: false
+    lam: 1.0
+    recon_loss_type: additive_matryoshka
+    cl_loss_type: fanchor
+    epochs: 10
+    lr_shared: 5e-5
+    lr_private: 5e-5
+
+  factorcl:
+    embed_dim: 256
+    hidden_dim: 512
+    layers: 3
+    shared_residual: false
+    epochs: 10
+    lr: 5e-5
+    n_club: 1
+
+  disentangledssl:
+    embed_dim: 256
+    private_dim: 64
+    hidden_dim: 512
+    layers: 3
+    shared_residual: false
+    kappa: 1000.0
+    beta: 1.0
+    lmd: 0.1
+    epochs_s1: 10
+    epochs_s2: 6
+    lr: 5e-5
+
+  jointdisen:
+    embed_dim: 256
+    private_dim: 64
+    hidden_dim: 512
+    layers: 3
+    shared_residual: false
+    kappa: 1000.0
+    a: 1.0
+    lmd: 0.1
+    epochs: 10
+    lr: 5e-5
+
+  repercent:
+    tokens: true
+    embed_dim: 256
+    depth: 2
+    cross_heads: 2
+    latent_heads: 1
+    kappa: 3000.0
+    alpha: 6.0
+    beta: 2.0
+    lmd: 4.0
+    epochs: 10
+    lr: 5e-5
