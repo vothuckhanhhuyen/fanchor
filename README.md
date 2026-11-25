@@ -1,6 +1,6 @@
 <h1 align="center">FAnchor</h1>
 
-<h3 align="center"><em>Aligned, yet distinct</em>: Shared–Private Factorization of Multimodal Representations with Formal Guarantees</h3>
+<h3 align="center"><em>Aligned, yet distinct</em>: Shared–Private Factorization of Multimodal Representations<br>with Formal Guarantees</h3>
 
 ---
 
