@@ -2,14 +2,9 @@
 
 <h3 align="center"><em>Aligned, yet distinct</em>: Shared–Private Factorization of Multimodal Representations with Formal Guarantees</h3>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/arXiv-coming%20soon-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2EA44F?style=for-the-badge" alt="License: MIT"></a>
-  <a href="environment.yml"><img src="https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10"></a>
-  <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.8-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch 2.8"></a>
-</p>
-
 ---
+
+<p align="center"><a href="#"><img src="https://img.shields.io/badge/arXiv-preprint-b31b1b.svg" height="28" alt="arXiv"></a> <a href="environment.yml"><img src="https://img.shields.io/badge/python-3.10-3776AB?logo=python&logoColor=white" height="28" alt="Python"></a> <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-core-EE4C2C?logo=pytorch&logoColor=white" height="28" alt="PyTorch"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" height="28" alt="License: MIT"></a></p>
 
 ## 💡 Overview
 
