@@ -45,9 +45,9 @@ mkdir -p logs_cluster/{clevr4,vggsound,rococo,synthetic}
 
 | Dataset | Data | Encoders | Methods |
 | --- | --- | --- | --- |
-| `clevr4` | Clevr-4 + template captions | CLIP-RN50 | `fanchor`, `factorcl`, `disentangledssl`, `jointdisen`, `repercent` |
-| `vggsound` | VGGSound, tested on VGGSound and VGGSounder | PE-AV-Base | `fanchor`, `factorcl`, `disentangledssl`, `jointdisen`, `repercent` |
-| `rococo` | MS-COCO, tested on MS-COCO 5K and RoCOCO | CLIP-ViT-B/32 | `fanchor`, `factorcl`, `disentangledssl`, `jointdisen`, `repercent`, `finetuned_proj_clip` |
+| `clevr4` | Clevr-4 + template captions | CLIP&#8209;RN50 | `fanchor`, `factorcl`, `disentangledssl`, `jointdisen`, `repercent` |
+| `vggsound` | VGGSound, tested on VGGSound and VGGSounder | PE&#8209;AV&#8209;Base | `fanchor`, `factorcl`, `disentangledssl`, `jointdisen`, `repercent` |
+| `rococo` | MS-COCO, tested on MS-COCO 5K and RoCOCO | CLIP&#8209;ViT&#8209;B/32 | `fanchor`, `factorcl`, `disentangledssl`, `jointdisen`, `repercent`, `finetuned_proj_clip` |
 | `synthetic` | generated | - | `fanchor` |
 
 FAnchor is `fanchor` (with `hier_cond=True`: FAnchor + Cond.). Baselines: `factorcl`, `disentangledssl`, `jointdisen` (JointOpt), `repercent`.
